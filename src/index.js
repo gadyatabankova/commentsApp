@@ -92,7 +92,10 @@ class CommentsApp extends React.Component {
                       DEL
                     </button>
                   </span>
-                  <div><b>Комментарий:</b> {item.comment}</div>
+                  <div>
+                    <b>Комментарий: </b>
+                    <span dangerouslySetInnerHTML={{ __html: item.comment}}></span>
+                  </div>
                 </div>
               );
             })
