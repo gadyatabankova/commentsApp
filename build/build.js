@@ -131,7 +131,6 @@ var CommentsApp = /*#__PURE__*/function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(CommentsApp).call(this));
     var object = JSON.parse(localStorage.getItem('this.state'));
-    console.log(object);
     var propObject;
 
     if (object == null) {
@@ -208,7 +207,11 @@ var CommentsApp = /*#__PURE__*/function (_React$Component) {
           onClick: function onClick() {
             return _this2.delComment(item);
           }
-        }, "DEL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439:"), " ", item.comment));
+        }, "DEL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          dangerouslySetInnerHTML: {
+            __html: item.comment
+          }
+        })));
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.addComment
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u0430\u0448\u0435 \u0438\u043C\u044F:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {

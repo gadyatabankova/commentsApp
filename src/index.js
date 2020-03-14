@@ -8,7 +8,6 @@ class CommentsApp extends React.Component {
     super();
 
     const object = JSON.parse(localStorage.getItem ('this.state'));
-    console.log(object);
     let propObject;
 
     if (object == null) {
